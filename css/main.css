@@ -2,7 +2,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -47,14 +48,18 @@ h1 {
           backdrop-filter: blur(10px);
   position: fixed;
   width: 100%;
-  top: 0;
-  margin-top: 20px;
 }
 
 .nav__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .navbar {
@@ -68,9 +73,15 @@ h1 {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 50px;
 }
 
@@ -80,12 +91,16 @@ h1 {
   cursor: pointer;
   font-weight: 500;
   font-size: 20px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .menu li:hover {
   color: pink;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .menu li:hover::after {
@@ -117,6 +132,7 @@ h1 {
 footer {
   width: 100%;
   bottom: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#4f0d06), to(#4f0d06));
   background: linear-gradient(to right, #4f0d06, #4f0d06);
   color: #fff;
   padding: 100px 0 30px;
@@ -128,19 +144,28 @@ footer {
 .row {
   width: 85%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .col {
-  flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   padding: 10px;
 }
 
 .col:nth-child(2) .col:nth-child(3) {
-  flex-basis: 15%;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
 }
 
 .logo {
@@ -158,12 +183,16 @@ footer {
   font-weight: 300;
   color: #bbbbbb;
   display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .logo-title:hover {
   color: #ffffff;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .logo-title:hover::after {
@@ -183,6 +212,7 @@ col p {
 .col h3 {
   font-size: 22px;
   font-weight: 800;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-transform: capitalize;
@@ -197,7 +227,8 @@ col p {
   bottom: -10px;
   background-color: #e91e63;
   height: 2px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 60px;
 }
 
@@ -209,6 +240,7 @@ col p {
   font-weight: 300;
   color: #bbbbbb;
   display: block;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
@@ -218,6 +250,7 @@ col p {
 }
 
 .email-id {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-bottom: 1px solid #ccc;
@@ -236,9 +269,15 @@ ul li a {
 
 form {
   padding-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #ccc;
   margin-bottom: 50px;
 }
@@ -311,7 +350,17 @@ hr {
   position: absolute;
   top: 0;
   left: 10px;
-  animation: moving 2s linear infinite;
+  -webkit-animation: moving 2s linear infinite;
+          animation: moving 2s linear infinite;
+}
+
+@-webkit-keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 @keyframes moving {
@@ -327,10 +376,12 @@ hr {
     bottom: unset;
   }
   .col {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .col:nth-child(2) .col:nth-child(3) {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 .kompanies {
@@ -338,9 +389,12 @@ hr {
 }
 
 .kompanies__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .kompanies__right {
@@ -365,8 +419,11 @@ hr {
 }
 
 .input_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 h3 {
@@ -385,9 +442,16 @@ h3 {
   background-color: #fdfbfb;
 }
 .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .wrapper form input {
   border-radius: 5px;
@@ -404,9 +468,15 @@ h3 {
 }
 
 .small_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -446,8 +516,11 @@ h3 {
 }
 
 .people__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .people__item {
@@ -471,4 +544,4 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
-}/*# sourceMappingURL=main.css.map */
+}
