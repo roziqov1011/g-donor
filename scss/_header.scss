@@ -1,0 +1,73 @@
+h1{
+overflow: hidden;
+}
+.header {
+    border-bottom: 1px solid #000;
+    background-color: #ffffff43;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{
+    background-color: transparent !important;
+}
+
+.logo{
+    border-radius: 1px;
+    width: 100px;
+    height: 100px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu li:hover {
+    color: pink;
+    transform: scale(1.2);
+}
+
+.menu li:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: pink;
+}
+
+
+.hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://www.hunterdonhealth.org/sites/default/files/styles/1440x480_hero_/public/2022-06/71818491_eps%20flipped-01.jpg?itok=FzyXJYu0');
+    height: 600px;
+    padding-top: 200px;
+    .hero_title{
+        color: white;
+        font-size: 50px;
+    }
+    p{
+        color: white;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,44 @@
+.input_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3{
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+.wrapper {
+    background: transparent;
+    border: 2px solid #222;
+    color: #441b1b;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background-color: #fdfbfb;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        input {
+            border-radius: 5px;
+            padding: 10px 0;
+            border: 1px solid #000;
+            margin-top: 10px;
+        }
+        button{
+            
+            background-color:transparent;
+            border-radius: 5px;
+            color: rgb(131, 72, 72);
+            padding: 8px 16px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
